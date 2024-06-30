@@ -1,0 +1,77 @@
+{
+  "name": "Sabbha Mondal",
+  "contact": {
+    "email": "mondalsabbha@gmail.com",
+    "phone": "+91 9007857713",
+    "location": "Kolkata, West Bengal, India",
+    "linkedin": "https://www.linkedin.com/in/mondal-sabbha/",
+    "github": "https://github.com/Sabbha20"
+  },
+  "summary": [
+    "Life long learner. I love learning stuff.",
+    "Almost 9 years of IT experience.",
+    "Python Developer - in Tata Consultancy Service(2022-2024).",
+    "SOA & OSB Developer in Cognizant Technology Solutions(2015-2022).",
+    "Self-independent, reliable and friendly individual who works hard to achieve his goals.",
+    "Adaptable quickly, and organised well. Interested in learning the latest web & software technologies quickly.",
+    "Special Interest in PYTHON, AI/ML, RUST, FLUTTER.",
+    "Able to work well in teams as well as individually. My future goal is to become a AI/ML developer."
+  ],
+  "skills": [
+    "Python",
+    "Selenium Webdriver",
+    "OpenPyXL",
+    "Spacy",
+    "OpenCV",
+    "MySQL",
+    "PL-SQL",
+    "Numpy",
+    "Pandas",
+    "Matplotlib",
+    "Pywin32",
+    "Tkinter",
+    "Flask",
+    "HTML/CSS/JS",
+    "Rust",
+    "Flutter"
+  ],
+  "experience": [
+    {
+      "title": "Python Developer (IT Analyst)",
+      "company": "Tata Consultancy Service",
+      "duration": "June 2022 - April 2024",
+      "responsibilities": [
+        "Developed Python Robotic Automation Desktop Tool.",
+        "Developed the tools using the below technologies:",
+        "Selenium Webdriver",
+        "OpenPyXL",
+        "Pywin32",
+        "Tkinter",
+        "PyODBC",
+        "Spacy (NLP)",
+        "OpenCV",
+        "Pytesseract",
+        "SQL",
+        "Documented the overall projects, starting from idea initiation, planning and research done, development of tool (coding part), testing and debugging (co-ordinating with other teams), managers approvals, release",
+        "Did research on unknown topics and provided quick and feasible solutions."
+      ]
+    },
+    {
+      "title": "Oracle Fusion Middleware (SOA) Developer",
+      "company": "Cognizant Technology Solutions India",
+      "duration": "April 2015 - June 2022",
+      "responsibilities": [
+        "Developed SOA and OSB services in Oracle TechStack Practice.",
+        "SOA and OSB Integration with various adapters - File adapters, FTP adapters, DB adapters, REST Api connections, SOAP services, Queues and Topics JMS",
+        "Developed MFT integrations.",
+        "Deployed code in Bitbucket(SourceTree)"
+      ]
+    }
+  ],
+  "education": {
+    "degree": "B.Tech in Computer Science Engineering (CSE)",
+    "institution": "West Bengal University of Technology (WBUT)",
+    "duration": "August 2010 - July 2014",
+    "result": "7.75"
+  }
+}
