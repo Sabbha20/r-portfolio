@@ -1,3 +1,6 @@
+mod data;
+
+use data::data::p_data;
 use actix_files as fs;
 use actix_web::{web, App, HttpServer, HttpResponse, Responder};
 use tera::{Tera, Context};
@@ -11,7 +14,7 @@ async fn home(tmpl: web::Data<Tera>) -> impl Responder {
     let mut context = Context::new();
     context.insert("title", "Home Page");
     context.insert("message", "Welcome to Sabbha Mondal's Portfolio");
-
+    context.insert("data", &p_data());
     let rendered = tmpl.render("index.html", &context).unwrap();
     HttpResponse::Ok().body(rendered)
 }
@@ -22,7 +25,7 @@ async fn about(tmpl: web::Data<Tera>) -> impl Responder {
     context.insert("title", "About Page");
     context.insert("message", "About Sabbha Mondal");
 
-    let rendered = tmpl.render("index.html", &context).unwrap();
+    let rendered = tmpl.render("about.html", &context).unwrap();
     HttpResponse::Ok().body(rendered)
 }
 
