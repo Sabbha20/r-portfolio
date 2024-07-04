@@ -50,13 +50,13 @@ async fn main() -> std::io::Result<()> {
     HttpServer::new(move || {
         App::new()
             .app_data(web::Data::new(tera.clone())) // Make tera available to handlers
-            .service(fs::Files::new("/static", "static").show_files_listing()) // Serve static files
+            .service(fs::Files::new("/static", "./static").show_files_listing()) // Serve static files
             .route("/", web::get().to(home))
             .route("/about", web::get().to(about))
             .route("/contact", web::get().to(contact))
             .route("/projects", web::get().to(projects))
     })
-        .bind("127.0.0.1:8000")?
+        .bind("127.0.0.1:8001")?
         .run()
         .await
 }

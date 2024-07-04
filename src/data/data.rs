@@ -8,6 +8,7 @@ use serde_json;
 #[derive(Serialize, Deserialize)]
 pub struct Resume {
     name: String,
+    heading:String,
     contact: Contact,
     summary: Vec<String>,
     skills: Vec<String>,
