@@ -1,138 +1,116 @@
-a.nav-link.p-nav-links{
-    border-bottom: 3px solid darkslategrey !important;
-    color: inherit;
-    text-decoration: none;
-    position: relative;
-    z-index: 1;
-}
-/* Import a hand-drawn font */
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
-/* General Styles */
+
 body {
-    font-family: 'Shadows Into Light', cursive;
-    background-color: #e0e0e0;
-    background-image: url('https://www.transparenttextures.com/patterns/sketchy-paper.png');
-    color: #333;
+    font-family: 'JetBrains Mono', monospace;
+    margin: 0;
+    padding: 0;
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
     padding: 20px;
+    border: 1px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
     margin: 0;
 }
 
-/* Container */
-.container {
-    width: 80%;
-    margin: 0 auto;
-    background: #fff;
-    padding: 20px;
-    border: 3px solid #333;
-    border-radius: 10px;
-    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
+/* Sections */
+section {
+    margin-bottom: 20px;
 }
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Shadows Into Light', cursive;
-    color: #222;
-    margin: 10px 0;
-    text-shadow: 2px 2px 0 #fff;
-    border-bottom: 2px solid #333;
-    padding-bottom: 5px;
+section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-/* Paragraphs */
-p {
-    font-size: 1.2em;
-    line-height: 1.6em;
-    margin: 10px 0;
-    text-shadow: 1px 1px 0 #fff;
-}
-
-/* Links */
-a {
-    color: #d9534f;
-    text-decoration: none;
-    border-bottom: 2px dashed #d9534f;
-    text-shadow: 1px 1px 0 #fff;
-}
-
-a:hover {
-    color: #c9302c;
-    border-bottom: 2px solid #c9302c;
-}
-
-/* Buttons */
-button {
-    font-family: 'Shadows Into Light', cursive;
-    background-color: #f0ad4e;
-    border: 3px solid #333;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
-}
-
-button:hover {
-    background-color: #ec971f;
-}
-
-/* Forms */
-input, textarea {
-    font-family: 'Shadows Into Light', cursive;
-    border: 3px solid #333;
-    padding: 10px;
-    border-radius: 5px;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 10px 0;
-    box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.1);
-}
-
-textarea {
-    height: 150px;
-}
-
-/* List Styles */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    background: url('https://www.transparenttextures.com/patterns/sketchy-paper.png') no-repeat left center;
-    padding-left: 20px;
-    margin: 5px 0;
-    text-shadow: 1px 1px 0 #fff;
-}
-
-/* Navigation */
-nav {
-    background-color: #e0e0e0;
-    border: 3px solid #333;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px 0;
-    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
-}
-
-nav a {
-    margin: 0 10px;
+section p {
     font-size: 1.2em;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    margin: 20px 0;
-    padding: 10px 0;
-    border-top: 3px solid #333;
-    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
 }
 
-/* Custom Borders for a Hand-drawn Effect */
-.container, nav, footer {
-    border-style: solid;
-    border-width: 3px;
-    border-color: #333;
-    border-radius: 10px;
-    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
+/* Light Theme */
+body.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.light-theme .container {
+    background-color: #f0f0f0;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #2e2e2e;
+    color: #ffffff;
+}
+
+body.dark-theme .container {
+    background-color: #333333;
+}
+
+/* Button */
+#theme-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+     padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    /*background-color: #007bff;*/
+    color: #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+body.light-theme #sun-icon {
+    display: inline-block;
+}
+
+/* Moon Icon (dark theme) */
+body.dark-theme #moon-icon {
+    display: inline-block;
+}
+
+/* Make Sun Icon white in Dark Theme */
+body.dark-theme #sun-icon {
+    filter: invert(1);
+}
+
+
+/*#theme-switcher:hover {*/
+/*    background-color: #0056b3;*/
+/*}*/
+
+a.nav-link.p-nav-links{
+    border-bottom: 3px solid darkslategrey !important;
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
 }
