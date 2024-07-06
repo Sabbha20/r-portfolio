@@ -8,7 +8,8 @@ use serde_json;
 #[derive(Serialize, Deserialize)]
 pub struct Resume {
     name: String,
-    heading:String,
+    heading: String,
+    pub tag: Vec<String>,
     contact: Contact,
     summary: Vec<String>,
     skills: Vec<String>,
@@ -50,7 +51,7 @@ pub fn read_resume_from_file(path: &str) -> Result<Resume, Box<dyn std::error::E
 }
 
 pub fn p_data() -> Resume {
-    let resume = read_resume_from_file("data.json").expect("Could not read JSON file");
+    let resume = read_resume_from_file(".data.json").expect("Could not read JSON file");
     resume
 }
 

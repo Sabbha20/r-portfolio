@@ -23,21 +23,33 @@
 </a>
 <header>
     <!-- Common header content -->
-    <h1>My Portfolio</h1>
-    <nav>
-        <ul class="nav justify-content-center">
+
+    <nav class="my-4 mb-5 navbar-expand-lg navbar-expand-md">
+        <div class="container-fluid  d-flex">
+            <a class="navbar-brand m-auto delius-unicase-bold" href="/">
+                <img src="/static/logo/logo-rbg.png"
+                     alt="Sabbha Mondal" class="img" width="100"/><br>
+                Sabbha Mondal
+            </a>
+        <ul class="nav justify-content-center me-auto mt-3">
             <li class="nav-item"><a class="nav-link p-0 mx-5 p-nav-links" href="/">/home</a></li>
             <li class="nav-item"><a class="nav-link p-0 mx-5 p-nav-links" href="/about">/about</a></li>
             <li class="nav-item"><a class="nav-link p-0 mx-5 p-nav-links" href="/projects">/projects</a></li>
             <li class="nav-item"><a class="nav-link p-0 mx-5 p-nav-links" href="/contact">/contact</a></li>
         </ul>
+        </div>
     </nav>
 </header>
 
-<main>
-    {% block content %}{% endblock %}
-</main>
+<div class="container my-container">
 
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+
+</div>
+<hr>
 <footer>
     <!-- Common footer content -->
     <p>&copy; 2024 My Portfolio. All rights reserved.</p>

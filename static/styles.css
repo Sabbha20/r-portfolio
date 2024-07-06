@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 body {
     font-family: 'JetBrains Mono', monospace;
     margin: 0;
@@ -13,10 +11,19 @@ body {
     color: #000;
     transition: background-color 0.3s, color 0.3s;
 }
+.delius-unicase-regular {
+    font-family: "Delius Unicase", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
 
-.container {
+.delius-unicase-bold {
+    font-family: "Delius Unicase", "cursive"; !important;
+    font-weight: 700;
+    font-style: normal;
+}
+.my-container {
     width: 80%;
-    max-width: 800px;
     padding: 20px;
     border: 1px solid #333;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -88,14 +95,6 @@ body.dark-theme .container {
     transition: background-color 0.3s;
 }
 
-body.light-theme #sun-icon {
-    display: inline-block;
-}
-
-/* Moon Icon (dark theme) */
-body.dark-theme #moon-icon {
-    display: inline-block;
-}
 
 /* Make Sun Icon white in Dark Theme */
 body.dark-theme #sun-icon {
@@ -108,9 +107,49 @@ body.dark-theme #sun-icon {
 /*}*/
 
 a.nav-link.p-nav-links{
-    border-bottom: 3px solid darkslategrey !important;
     color: inherit;
     text-decoration: none;
     position: relative;
     z-index: 1;
+}
+
+body.light-theme a.nav-link.p-nav-links{
+    border-bottom: 3px solid darkslategrey !important;
+}
+body.dark-theme a.nav-link.p-nav-links{
+    border-bottom: 3px solid #f0f0f0 !important;
+}
+
+
+body.light-theme a.nav-link.p-nav-links:hover{
+    border-bottom: 3px solid #f0f0f0 !important;
+    color: #f0f0f0;
+    background-color: darkslategrey;
+}
+body.dark-theme a.nav-link.p-nav-links:hover{
+    border-bottom: 3px solid darkslategrey !important;
+    color: darkslategrey;
+    background-color: #f0f0f0;
+}
+
+.typing-container {
+    display: flex;
+    align-items: center;
+}
+
+.cursor {
+    font-weight: bold;
+    animation: blink 0.7s infinite;
+}
+body.dark-theme .cursor{
+    color: #ffffff;
+}
+body.light-theme .cursor{
+    color: #2e2e2e;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
 }
