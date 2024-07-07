@@ -1,63 +1,84 @@
-
 document.addEventListener('DOMContentLoaded', function() {
+    const banner = document.querySelector('.banner');
+    const items = document.querySelectorAll('.banner-item');
+    const [prevBtn, nextBtn] = ['.prev', '.next'].map(selector => document.querySelector(selector));
+    const [sunIcon, moonIcon] = ['sun-icon', 'moon-icon'].map(id => document.getElementById(id));
+    const themeSwitcher = document.getElementById('theme-switcher');
+    const dynamicText = document.querySelector('.dynamic-text');
+    const cursor = document.querySelector('.cursor');
+    let currentIndex = 0;
+    let currentGradient = 1;
+    let phraseIndex = 0;
+    let charIndex = 0;
+
+    const showItem = index => banner.style.transform = `translateX(-${index * 100}%)`;
+    const nextSlide = () => {
+        currentIndex = (currentIndex + 1) % items.length;
+        showItem(currentIndex);
+    };
+
+    const prevSlide = () => {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        showItem(currentIndex);
+    };
+
+    [
+        [prevBtn, prevSlide],
+        [nextBtn, nextSlide],
+        [themeSwitcher, toggleTheme]
+    ].forEach(([element, handler]) => element.addEventListener('click', handler));
+
+    setInterval(nextSlide, 10000);
+
+    function updateLottieTheme() {
+        const filter = document.body.classList.contains('dark-theme') ? 'invert(1)' : 'none';
+        document.querySelectorAll('lottie-player').forEach(player => player.style.filter = filter);
+    }
+
+    function toggleTheme() {
+        document.body.classList.toggle('dark-theme');
+        document.body.classList.toggle('light-theme');
+        [moonIcon, sunIcon].forEach(icon => icon.style.display = icon.style.display === 'none' ? 'inline-block' : 'none');
+        updateLottieTheme();
+        cycleGradient();
+    }
+
+    function cycleGradient() {
+        currentGradient = (currentGradient % 3) + 1;
+        const theme = document.body.classList.contains('light-theme') ? 'light' : 'dark';
+        document.body.style.background = `var(--${theme}-gradient-${currentGradient})`;
+    }
+
     fetch('/phrases')
         .then(response => response.json())
-        .then(data => {
-            // console.log(data)
-            const phrases = data;
-            const typingDelay = 100;
-            const erasingDelay = 50;
-            const newPhraseDelay = 2000; // Delay before starting to type a new phrase
-            let phraseIndex = 0;
-            let charIndex = 0;
-
-            const dynamicText = document.querySelector('.dynamic-text');
-            const cursor = document.querySelector('.cursor');
-
+        .then(phrases => {
             function type() {
                 if (charIndex < phrases[phraseIndex].length) {
-                    if (!cursor.classList.contains('typing')) cursor.classList.add('typing');
-                    dynamicText.textContent += phrases[phraseIndex].charAt(charIndex);
-                    charIndex++;
-                    setTimeout(type, typingDelay);
+                    cursor.classList.add('typing');
+                    dynamicText.textContent += phrases[phraseIndex][charIndex++];
+                    setTimeout(type, 100);
                 } else {
                     cursor.classList.remove('typing');
-                    setTimeout(erase, newPhraseDelay);
+                    setTimeout(erase, 2000);
                 }
             }
 
             function erase() {
                 if (charIndex > 0) {
-                    if (!cursor.classList.contains('typing')) cursor.classList.add('typing');
-                    dynamicText.textContent = phrases[phraseIndex].substring(0, charIndex - 1);
-                    charIndex--;
-                    setTimeout(erase, erasingDelay);
+                    cursor.classList.add('typing');
+                    dynamicText.textContent = phrases[phraseIndex].substring(0, --charIndex);
+                    setTimeout(erase, 50);
                 } else {
                     cursor.classList.remove('typing');
-                    phraseIndex++;
-                    if (phraseIndex >= phrases.length) phraseIndex = 0;
-                    setTimeout(type, typingDelay + 1100);
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    setTimeout(type, 1200);
                 }
             }
 
-            setTimeout(type, newPhraseDelay + 250);
+            setTimeout(type, 2250);
         })
         .catch(error => console.error('Error fetching phrases:', error));
-});
-const sunIcon = document.getElementById("sun-icon");
-const moonIcon = document.getElementById("moon-icon");
-document.getElementById('theme-switcher').addEventListener('click', function() {
-    document.body.classList.toggle('dark-theme');
-    document.body.classList.toggle('light-theme');
-    if (sunIcon && moonIcon){
-        if (document.body.classList.contains('dark-theme')){
-            document.getElementById('moon-icon').style.display = 'none';
-            document.getElementById('sun-icon').style.display = 'inline-block';
-        }
-        else {
-            document.getElementById('sun-icon').style.display = 'none';
-            document.getElementById('moon-icon').style.display = 'inline-block';
-        }
-    }
-});
 
+    updateLottieTheme();
+    setInterval(cycleGradient, 10000);
+});

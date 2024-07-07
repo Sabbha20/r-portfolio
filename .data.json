@@ -1,23 +1,28 @@
 {
   "name": "Sabbha Mondal",
   "heading": "Python Developer",
-  "service": [
+  "services": [
     {
       "title": "Python Automation",
-      "description": "Streamline your workflows with custom Python automation solutions."
+      "description": "Streamline your workflows with custom Python automation solutions.",
+      "gif" : "/static/banner/auto1.json"
     },
     {
       "title": "Desktop App Development",
-      "description": "Create powerful and user-friendly desktop applications using Python."
+      "description": "Create powerful and user-friendly desktop applications using Python.",
+      "gif" : "/static/banner/auto1.json"
     }, {
       "title": "Web Scraping",
-      "description": "Extract valuable data from websites with efficient Python scripts."
+      "description": "Extract valuable data from websites with efficient Python scripts.",
+      "gif" : "/static/banner/auto1.json"
     }, {
       "title": "Data Analysis",
-      "description": "Gain insights from your data using Python's powerful data analysis libraries."
+      "description": "Gain insights from your data using Python's powerful data analysis libraries.",
+      "gif" : "/static/banner/auto1.json"
     }, {
       "title": "AI/ML Solutions",
-      "description": "Implement machine learning models and AI algorithms for your business needs."
+      "description": "Implement machine learning models and AI algorithms for your business needs.",
+      "gif" : "/static/banner/auto1.json"
     }
   ],
   "tag": ["Python Developer.",

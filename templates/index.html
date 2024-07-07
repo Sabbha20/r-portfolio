@@ -5,11 +5,32 @@
 {% block content %}
 <h1>{{ message }}</h1>
 
-{{ data.tag }}
+<div class="banner-container">
+    <div class="banner">
+        {% for service in data.services %}
+        <div class="banner-item">
+            <div class="service-content">
+                <div class="service-icon">
+                    <lottie-player class="img-fluid rounded-start"
+                                   src={{ service.gif }} background="transparent" speed="1" style="width: 50vw; height: 50vh;" loop autoplay></lottie-player>
+                </div>
+                <div class="service-text">
+                    <h2>{{ service.title }}</h2>
+                    <p>{{ service.description }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <button class="banner-nav prev">&lt;</button>
+    <button class="banner-nav next">&gt;</button>
+</div>
+
+<div class="container my-container">
 <div class="typing-container">
     <span class="static-text">I am a&nbsp;</span>
     <span class="dynamic-text"></span>
     <span class="cursor">|</span>
 </div>
-
+</div>
 {% endblock %}

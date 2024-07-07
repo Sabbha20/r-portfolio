@@ -42,9 +42,12 @@ pub struct Education {
     duration: String,
     result: String,
 }
+
+#[derive(Serialize, Deserialize)]
 pub struct Services {
     title: String,
-    description: String
+    description: String,
+    gif: String,
 }
 
 pub fn read_resume_from_file(path: &str) -> Result<Resume, Box<dyn std::error::Error>> {
