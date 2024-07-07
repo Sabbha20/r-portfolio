@@ -1,6 +1,25 @@
 {
   "name": "Sabbha Mondal",
   "heading": "Python Developer",
+  "service": [
+    {
+      "title": "Python Automation",
+      "description": "Streamline your workflows with custom Python automation solutions."
+    },
+    {
+      "title": "Desktop App Development",
+      "description": "Create powerful and user-friendly desktop applications using Python."
+    }, {
+      "title": "Web Scraping",
+      "description": "Extract valuable data from websites with efficient Python scripts."
+    }, {
+      "title": "Data Analysis",
+      "description": "Gain insights from your data using Python's powerful data analysis libraries."
+    }, {
+      "title": "AI/ML Solutions",
+      "description": "Implement machine learning models and AI algorithms for your business needs."
+    }
+  ],
   "tag": ["Python Developer.",
     "Automation Tool Developer.",
     "Desktop App Developer.",

@@ -9,6 +9,7 @@ use serde_json;
 pub struct Resume {
     name: String,
     heading: String,
+    services: Vec<Services>,
     pub tag: Vec<String>,
     contact: Contact,
     summary: Vec<String>,
@@ -41,7 +42,10 @@ pub struct Education {
     duration: String,
     result: String,
 }
-
+pub struct Services {
+    title: String,
+    description: String
+}
 
 pub fn read_resume_from_file(path: &str) -> Result<Resume, Box<dyn std::error::Error>> {
     let file = File::open(path)?;
