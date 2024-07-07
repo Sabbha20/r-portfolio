@@ -47,13 +47,17 @@ body.dark-theme {
     color: var(--dark-text);
 }
 
+.delius-unicase{
+    font-family: "Delius Unicase", "cursive";
+}
+
 .delius-unicase-regular {
-    font-family: "Delius Unicase", cursive;
+    font-family: "Delius Unicase", "cursive";
     font-weight: 400;
 }
 
 .delius-unicase-bold {
-    font-family: "Delius Unicase", cursive !important;
+    font-family: "Delius Unicase", "cursive" !important;
     font-weight: 700;
 }
 
@@ -166,6 +170,7 @@ body.dark-theme lottie-player {
 .banner-container {
     position: relative;
     width: 100%;
+    height: 70vh;
     overflow: hidden;
     margin-bottom: 30px;
     background: rgba(255, 255, 255, 0.15);

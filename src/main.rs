@@ -13,7 +13,7 @@ use env_logger;
 async fn home(tmpl: web::Data<Tera>) -> impl Responder {
     let mut context = Context::new();
     context.insert("title", "Home Page");
-    context.insert("message", "Hello, I'm Sabbha!");
+    context.insert("message", "If you are looking for");
     context.insert("data", &p_data());
     let rendered = tmpl.render("index.html", &context).unwrap();
     HttpResponse::Ok().body(rendered)
