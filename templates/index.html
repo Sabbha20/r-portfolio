@@ -27,11 +27,23 @@
     <button class="banner-nav next">&gt;</button>
 </div>
 
-<div class="container my-container">
-<div class="typing-container">
-    <span class="static-text">I am a&nbsp;</span>
-    <span class="dynamic-text"></span>
-    <span class="cursor">|</span>
-</div>
+<div class="container my-container mb-5" style="margin-top: 5rem !important;">
+    <div class="inline-block">
+        <h1 class="text-center">Hello, this is {{ data.name }}<span class="cursor">|</span></h1>
+    </div>
+    <div class="container fs-2">
+        <div class="row align-items-center">
+            <div class="offset-sm-2 col-sm-4">
+                <div class="text-center w-50">
+                    <div class="static-text">and I am a</div>
+                    <span class="dynamic-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+            </div>
+            <div class="offset-sm-1 col-sm-5">
+                <img src="/static/images/Sabbha.svg" class="rounded float-start w-75" alt="Sabbha"/>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

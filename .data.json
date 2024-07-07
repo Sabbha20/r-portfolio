@@ -9,20 +9,25 @@
     },
     {
       "title": "Desktop App Development",
-      "description": "Create powerful and user-friendly desktop applications using Python.",
+      "description": "Will create powerful and user-friendly desktop applications using Python.",
       "gif" : "/static/banner/desktop.json"
     }, {
       "title": "Web Scraping",
-      "description": "Extract valuable data from websites with efficient Python scripts.",
+      "description": "Will extract valuable data from websites with efficient Python scripts.",
       "gif" : "/static/banner/scraping.json"
     }, {
       "title": "Data Analysis",
-      "description": "Gain insights from your data using Python's powerful data analysis libraries.",
+      "description": "Will provide insights from your data using Python's powerful data analysis libraries.",
       "gif" : "/static/banner/data.json"
     }, {
       "title": "AI/ML Solutions",
-      "description": "Implement machine learning models and AI algorithms for your business needs.",
+      "description": "Will implement machine learning models and AI algorithms for your business needs.",
       "gif" : "/static/banner/ml.json"
+    },
+    {
+      "title": "Mobile App Development",
+      "description": "Will build and develop high-performance mobile applications for iOS and Android, using Flutter and Python..",
+      "gif": "/static/banner/mobile.json"
     }
   ],
   "tag": ["Python Developer.",
