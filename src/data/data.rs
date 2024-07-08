@@ -48,6 +48,7 @@ pub struct Services {
     title: String,
     description: String,
     gif: String,
+    fas: String,
 }
 
 pub fn read_resume_from_file(path: &str) -> Result<Resume, Box<dyn std::error::Error>> {

@@ -1,15 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
+/*:root {*/
+/*    !* Light Theme *!*/
+/*    --light-gradient-1: linear-gradient(135deg, #f5f5f5 0%, #dcdcdc 100%);*/
+/*    --light-gradient-2: linear-gradient(to top, #f0f0f0 0%, #e0e0e0 100%);*/
+/*    --light-gradient-3: linear-gradient(120deg, #fafafa 0%, #e6e6e6 100%);*/
+
+/*    !* Dark Theme *!*/
+/*    --dark-gradient-1: linear-gradient(to bottom, #2f2f2f, #1a1a1a);*/
+/*    --dark-gradient-2: linear-gradient(to right, #3a3a3a, #2b2b2b);*/
+/*    --dark-gradient-3: linear-gradient(to bottom, #484848, #343434);*/
+
+/*    --light-text: #3a3a3a;*/
+/*    --dark-text: #e0e0e0;*/
+/*}*/
+
+/*:root {*/
+/*    !* PARTY THEME *!*/
+/*    !* Light Theme *!*/
+/*    --light-gradient-1: linear-gradient(135deg, #ffdddd 0%, #ffc2c2 100%);*/
+/*    --light-gradient-2: linear-gradient(to top, #ddffdd 0%, #c2ffc2 100%);*/
+/*    --light-gradient-3: linear-gradient(120deg, #ddeeff 0%, #c2e2ff 100%);*/
+/*    --light-gradient-4: linear-gradient(to right, #ddffff 0%, #c2ffff 100%);*/
+/*    --light-gradient-5: linear-gradient(to bottom, #ffebdd 0%, #ffd4c2 100%);*/
+/*    --light-gradient-6: linear-gradient(135deg, #ffffdd 0%, #ffffc2 100%);*/
+/*    --light-gradient-7: linear-gradient(to top, #fff5dd 0%, #ffedc2 100%);*/
+/*    --light-gradient-8: linear-gradient(120deg, #f5f5f5 0%, #e0e0e0 100%);*/
+
+/*    !* Dark Theme *!*/
+/*    --dark-gradient-1: linear-gradient(to bottom, #4a0f0f, #600000);*/
+/*    --dark-gradient-2: linear-gradient(to right, #0f4a0f, #006000);*/
+/*    --dark-gradient-3: linear-gradient(to bottom, #0f0f4a, #000060);*/
+/*    --dark-gradient-4: linear-gradient(to right, #0f4a4a, #006060);*/
+/*    --dark-gradient-5: linear-gradient(to bottom, #4a2f0f, #603000);*/
+/*    --dark-gradient-6: linear-gradient(to right, #4a4a0f, #606000);*/
+/*    --dark-gradient-7: linear-gradient(to bottom, #4a3a0f, #605000);*/
+/*    --dark-gradient-8: linear-gradient(to right, #3a3a3a, #2c2c2c);*/
+
+/*    --light-text: #3a3a3a;*/
+/*    --dark-text: #e0e0e0;*/
+/*}*/
 :root {
     /* Light Theme */
-    --light-gradient-1: linear-gradient(135deg, #f5f5f5 0%, #dcdcdc 100%);
-    --light-gradient-2: linear-gradient(to top, #f0f0f0 0%, #e0e0e0 100%);
-    --light-gradient-3: linear-gradient(120deg, #fafafa 0%, #e6e6e6 100%);
+    --light-gradient-1: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    --light-gradient-2: linear-gradient(to top, #ffffff 0%, #cccccc 100%);
+    --light-gradient-3: linear-gradient(120deg, #e5e5e5 0%, #d0d0d0 100%);
+    --light-gradient-4: linear-gradient(to right, #f2f2f2 0%, #e6e6e6 100%);
+    --light-gradient-5: linear-gradient(to bottom, #f8f8f8 0%, #eaeaea 100%);
+    --light-gradient-6: linear-gradient(135deg, #dddddd 0%, #bbbbbb 100%);
+    --light-gradient-7: linear-gradient(to top, #eeeeee 0%, #d9d9d9 100%);
+    --light-gradient-8: linear-gradient(120deg, #fafafa 0%, #e5e5e5 100%);
 
     /* Dark Theme */
     --dark-gradient-1: linear-gradient(to bottom, #2f2f2f, #1a1a1a);
     --dark-gradient-2: linear-gradient(to right, #3a3a3a, #2b2b2b);
     --dark-gradient-3: linear-gradient(to bottom, #484848, #343434);
+    --dark-gradient-4: linear-gradient(to right, #2e2e2e, #1e1e1e);
+    --dark-gradient-5: linear-gradient(to bottom, #3d3d3d, #292929);
+    --dark-gradient-6: linear-gradient(135deg, #4a4a4a, #2c2c2c);
+    --dark-gradient-7: linear-gradient(to top, #515151, #383838);
+    --dark-gradient-8: linear-gradient(120deg, #606060, #4a4a4a);
 
     --light-text: #3a3a3a;
     --dark-text: #e0e0e0;
@@ -18,6 +68,7 @@
 body {
     transition: background 0.5s ease, color 0.5s ease;
 }
+
 
 .banner {
     transition: transform 0.5s ease;
@@ -284,4 +335,57 @@ body.dark-theme .banner-item p {
 /* Update lottie-player filter transition */
 lottie-player {
     transition: filter 0.5s ease;
+}
+/* Footer Styling */
+.footer {
+    background: var(--light-gradient-4); /* Change to --dark-gradient-4 for dark theme */
+    color: var(--light-text); /* Change to --dark-text for dark theme */
+    padding: 2rem 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-link {
+    color: var(--light-text); /* Change to --dark-text for dark theme */
+    transition: color 0.3s ease;
+    font-size: 30px;
+}
+
+.footer-link:hover {
+    filter: invert(0.5);
+}
+
+.list-inline-item {
+    margin-right: 0.5rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid #dddddd;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+}
+
+/* Dark Theme Specific Styles */
+body.dark-theme .footer {
+    background: var(--dark-gradient-4);
+    color: var(--dark-text);
+}
+
+body.dark-theme .footer-link {
+    color: var(--dark-text);
+}
+
+body.dark-theme .footer-bottom {
+    border-color: #444444;
 }

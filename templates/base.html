@@ -10,6 +10,8 @@
           crossorigin="anonymous">
     <link rel="stylesheet" href="/static/styles.css" type="text/css">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <!-- Additional common headers -->
 </head>
 <body class="light-theme">
@@ -45,9 +47,45 @@
     </main>
 
 <hr>
-<footer>
-    <!-- Common footer content -->
-    <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+<!--<footer>-->
+<!--    &lt;!&ndash; Common footer content &ndash;&gt;-->
+<!--    <p>&copy; 2024 My Portfolio. All rights reserved.</p>-->
+<!--</footer>-->
+<!-- Footer -->
+<footer class="footer mt-auto py-3">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="footer-title">Services</h5>
+                <ul class="list-unstyled footer-text">
+                    {% for service in data.services %}
+                    <li><i class="fas {{ service.fas }}"></i>&nbsp;{{ service.title }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5 class="footer-title">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li class="nav-item"><a class="nav-link p-0 mx-5 p-nav-links" href="/">/home</a></li>
+                    <li class="nav-item"><a class="nav-link p-0 mx-5 p-nav-links" href="/about">/about</a></li>
+                    <li class="nav-item"><a class="nav-link p-0 mx-5 p-nav-links" href="/projects">/projects</a></li>
+                    <li class="nav-item"><a class="nav-link p-0 mx-5 p-nav-links" href="/contact">/contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5 class="footer-title">Follow Me</h5>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://github.com/your-profile" class="footer-link"><i class="fab fa-github"></i></a></li>
+                    <li class="list-inline-item"><a href="https://linkedin.com/in/your-profile" class="footer-link"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="list-inline-item"><a href="https://twitter.com/your-profile" class="footer-link"><i class="fab fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="https://youtube.com/your-channel" class="footer-link"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom pt-3">
+            <p class="mb-0">&copy; 2024 Sabbha Mondal. All Rights Reserved.</p>
+        </div>
+    </div>
 </footer>
 </body>
 <script src="/static/scripts.js"></script>

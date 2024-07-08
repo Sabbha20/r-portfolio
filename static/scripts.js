@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         [themeSwitcher, toggleTheme]
     ].forEach(([element, handler]) => element.addEventListener('click', handler));
 
-    setInterval(nextSlide, 10000);
+    setInterval(nextSlide, 6100);
 
     function updateLottieTheme() {
         const filter = document.body.classList.contains('dark-theme') ? 'invert(1)' : 'none';
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function cycleGradient() {
-        currentGradient = (currentGradient % 3) + 1;
+        currentGradient = (currentGradient % 8) + 1;
         const theme = document.body.classList.contains('light-theme') ? 'light' : 'dark';
         document.body.style.background = `var(--${theme}-gradient-${currentGradient})`;
     }
@@ -80,5 +80,5 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => console.error('Error fetching phrases:', error));
 
     updateLottieTheme();
-    setInterval(cycleGradient, 10000);
+    setInterval(cycleGradient, 1000000);
 });
