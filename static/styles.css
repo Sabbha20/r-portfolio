@@ -621,6 +621,9 @@ body.dark-theme .btn-custom {
     background-color: var(--dark-text);
     color: var(--light-text);
 }
+body.dark-theme ::placeholder{
+    color: var(--dark-text);
+}
 
 .btn-custom:hover {
     filter: invert(0.1);

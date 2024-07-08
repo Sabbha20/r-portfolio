@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="container my-5">
-    <h1 class="text-center mb-5">About {{ data.name }}</h1>
+    <h1 class="text-center mb-5">About {{ data.name }}<span class="cursor">|</span></h1>
 
     <div class="row">
         <div class="col-md-4 mb-4">
@@ -26,7 +26,7 @@
         <div class="row">
             {% for skill in data.skills %}
             <div class="col-md-3 col-sm-6 mb-3">
-                <div class="skill-badge p-2 text-center rounded">
+                <div class="skill-badge p-2 text-center rounded delius-unicase-bold">
                     <i class="{{ skill.icon }} fa-fw mr-2"></i>
 
                     {{ skill.name }}
@@ -43,9 +43,9 @@
             <div class="fancy-timeline-item">
                 <div class="fancy-timeline-marker"></div>
                 <div class="fancy-timeline-content">
-                    <h3 class="fancy-timeline-title">{{ job.title }}</h3>
-                    <h4 class="fancy-timeline-subtitle">{{ job.company }}</h4>
-                    <p class="fancy-timeline-date">{{ job.duration }}</p>
+                    <h3 class="fancy-timeline-title delius-unicase-bold">{{ job.title }}</h3>
+                    <h6 class="fancy-timeline-subtitle ">{{ job.company }}</h6>
+                    <p class="fancy-timeline-date ">{{ job.duration }}</p>
                     <ul class="fancy-timeline-responsibilities">
                         {% for responsibility in job.responsibilities %}
                         {% set comma_count = responsibility | split(pat=",") | length %}
@@ -73,9 +73,9 @@
             <div class="fancy-timeline-item">
                 <div class="fancy-timeline-marker"></div>
                 <div class="fancy-timeline-content">
-                    <h3 class="fancy-timeline-title">{{ data.education.degree }}</h3>
-                    <h4 class="fancy-timeline-subtitle">{{ data.education.institution }}</h4>
-                    <p class="fancy-timeline-date">{{ data.education.duration }}</p>
+                    <h3 class="fancy-timeline-title delius-unicase-bold">{{ data.education.degree }}</h3>
+                    <h6 class="fancy-timeline-subtitle ">{{ data.education.institution }}</h6>
+                    <p class="fancy-timeline-date ">{{ data.education.duration }}</p>
                     <p>Result: {{ data.education.result }}</p>
                 </div>
             </div>
