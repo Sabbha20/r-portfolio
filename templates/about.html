@@ -48,7 +48,17 @@
                     <p class="fancy-timeline-date">{{ job.duration }}</p>
                     <ul class="fancy-timeline-responsibilities">
                         {% for responsibility in job.responsibilities %}
-                        <li>{{ responsibility }}</li>
+                        {% set comma_count = responsibility | split(pat=",") | length %}
+                        {% if comma_count > 6 %}
+
+                        <ol>
+                            {% for item in responsibility | split(pat=",") %}
+                                    <li> {{ item | trim() }}{% if not loop.last %},<br>{% endif %}</li>
+                                {% endfor %}
+                                </ol>
+                            {% else %}
+                                <li>{{ responsibility }}</li>
+                            {% endif %}
                         {% endfor %}
                     </ul>
                 </div>
