@@ -33,8 +33,13 @@ async fn projects() -> impl Responder {
     HttpResponse::Ok().body("Projects will be listed here")
 }
 
-async fn contact() -> impl Responder {
-    HttpResponse::Ok().body("@mondal_sabbha contact")
+async fn contact(tmpl: web::Data<Tera>) -> impl Responder {
+    // HttpResponse::Ok().body("@mondal_sabbha contact")
+    let mut context = Context::new();
+    context.insert("title", "Contact Page");
+    context.insert("data", &p_data());
+    let rendered = tmpl.render("contact.html", &context).unwrap();
+    HttpResponse::Ok().body(rendered)
 }
 
 async fn get_phrases() -> impl Responder {

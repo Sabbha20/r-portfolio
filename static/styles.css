@@ -588,3 +588,40 @@ body.dark-theme img{
 body.light-theme img{
     filter: saturate(0.8) hue-rotate(-20deg);
 }
+
+.form-control {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-theme .form-control {
+    background-color: #ffffff;
+    color: var(--light-text);
+}
+
+body.dark-theme .form-control {
+    background-color: #343a40;
+    color: var(--dark-text);
+}
+
+.form-group label {
+    font-family: 'Delius Unicase', cursive;
+    font-weight: 700;
+}
+
+.btn-custom {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-theme .btn-custom {
+    background-color: var(--light-text);
+    color: var(--dark-text);
+}
+
+body.dark-theme .btn-custom {
+    background-color: var(--dark-text);
+    color: var(--light-text);
+}
+
+.btn-custom:hover {
+    filter: invert(0.1);
+}
