@@ -13,7 +13,7 @@ pub struct Resume {
     pub tag: Vec<String>,
     contact: Contact,
     summary: Vec<String>,
-    skills: Vec<String>,
+    skills: Vec<Skills>,
     experience: Vec<Experience>,
     education: Education,
 }
@@ -49,6 +49,12 @@ pub struct Services {
     description: String,
     gif: String,
     fas: String,
+}
+
+#[derive(Serialize, Deserialize)]
+pub struct Skills {
+    name: String,
+    icon: String,
 }
 
 pub fn read_resume_from_file(path: &str) -> Result<Resume, Box<dyn std::error::Error>> {

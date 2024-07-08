@@ -59,22 +59,70 @@
     "Able to work well in teams as well as individually. My future goal is to become a AI/ML developer."
   ],
   "skills": [
-    "Python",
-    "Selenium Webdriver",
-    "OpenPyXL",
-    "Spacy",
-    "OpenCV",
-    "MySQL",
-    "PL-SQL",
-    "Numpy",
-    "Pandas",
-    "Matplotlib",
-    "Pywin32",
-    "Tkinter",
-    "Flask",
-    "HTML/CSS/JS",
-    "Rust",
-    "Flutter"
+    {
+      "name": "Python",
+      "icon": "fab fa-python"
+    },
+    {
+      "name": "Selenium Webdriver",
+      "icon": "fas fa-robot"
+    },
+    {
+      "name": "OpenPyXL",
+      "icon": "far fa-file-excel"
+    },
+    {
+      "name": "Spacy",
+      "icon": "fas fa-language"
+    },
+    {
+      "name": "OpenCV",
+      "icon": "fas fa-camera"
+    },
+    {
+      "name": "MySQL",
+      "icon": "fas fa-database"
+    },
+    {
+      "name": "PL-SQL",
+      "icon": "fas fa-database"
+    },
+    {
+      "name": "Numpy",
+      "icon": "fas fa-superscript"
+    },
+    {
+      "name": "Pandas",
+      "icon": "fas fa-table"
+    },
+    {
+      "name": "Matplotlib",
+      "icon": "fas fa-chart-line"
+    },
+    {
+      "name": "Pywin32",
+      "icon": "fab fa-windows"
+    },
+    {
+      "name": "Tkinter",
+      "icon": "fas fa-desktop"
+    },
+    {
+      "name": "Flask",
+      "icon": "fas fa-flask"
+    },
+    {
+      "name": "HTML/CSS/JS",
+      "icon": "fas fa-code"
+    },
+    {
+      "name": "Rust",
+      "icon": "fab fa-rust"
+    },
+    {
+      "name": "Flutter",
+      "icon": "fas fa-mobile"
+    }
   ],
   "experience": [
     {
@@ -84,15 +132,7 @@
       "responsibilities": [
         "Developed Python Robotic Automation Desktop Tool.",
         "Developed the tools using the below technologies:",
-        "Selenium Webdriver",
-        "OpenPyXL",
-        "Pywin32",
-        "Tkinter",
-        "PyODBC",
-        "Spacy (NLP)",
-        "OpenCV",
-        "Pytesseract",
-        "SQL",
+        "Selenium Webdriver ,OpenPyXL ,Pywin32, Tkinter, PyODBC, Spacy (NLP), OpenCV, Pytesseract, SQL",
         "Documented the overall projects, starting from idea initiation, planning and research done, development of tool (coding part), testing and debugging (co-ordinating with other teams), managers approvals, release",
         "Did research on unknown topics and provided quick and feasible solutions."
       ]
