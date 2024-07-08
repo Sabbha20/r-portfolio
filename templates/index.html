@@ -6,7 +6,7 @@
 <div class="inline-block"><h1 class="text-center">{{ message }}<span class="cursor">|</span></h1></div>
 
 
-<div class="banner-container">
+<div class="banner-container container">
     <div class="banner">
         {% for service in data.services %}
         <div class="banner-item">
@@ -17,7 +17,7 @@
                 </div>
                 <div class="service-text">
                     <h2>{{ service.title }}</h2>
-                    <p>{{ service.description }}</p>
+                    <h6>{{ service.description }}</h6>
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@
 
 <div class="container my-container mb-5" style="margin-top: 5rem !important;">
     <div class="inline-block">
-        <h1 class="text-center">Hello, this is {{ data.name }}<span class="cursor">|</span></h1>
+        <h1 class="text-center border-bottom">Hello, this is {{ data.name }}<span class="cursor">|</span></h1>
     </div>
     <div class="container fs-2">
         <div class="row align-items-center">

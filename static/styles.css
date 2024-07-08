@@ -389,3 +389,159 @@ body.dark-theme .footer-link {
 body.dark-theme .footer-bottom {
     border-color: #444444;
 }
+/* Add these rules to your existing styles.css file */
+
+/* General responsive adjustments */
+@media (max-width: 1200px) {
+    .my-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    .my-container {
+        width: 95%;
+    }
+
+    .banner-container {
+        height: 80vh;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .my-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    .banner-container {
+        height: 90vh;
+    }
+
+    .service-icon lottie-player {
+        width: 90vw !important;
+        height: 30vh !important;
+    }
+
+    .banner-item {
+        padding: 20px 0;
+    }
+
+    .service-text h2 {
+        font-size: 1.5em;
+    }
+
+    .service-text h6 {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-container {
+        height: auto;
+        min-height: 80vh;
+    }
+
+    .service-icon lottie-player {
+        width: 100% !important;
+        height: 25vh !important;
+    }
+
+    .banner-nav {
+        padding: 5px 10px;
+        font-size: 14px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer-title {
+        font-size: 1.2rem;
+    }
+
+    .footer-text {
+        font-size: 0.9rem;
+    }
+
+    .footer-link {
+        font-size: 24px;
+    }
+}
+
+/* Responsive adjustments for the main content area */
+@media (max-width: 768px) {
+    .container.fs-2 .row {
+        flex-direction: column-reverse;
+    }
+
+    .container.fs-2 .offset-sm-2,
+    .container.fs-2 .offset-sm-1 {
+        margin-left: 0;
+    }
+
+    .container.fs-2 .col-sm-4,
+    .container.fs-2 .col-sm-5 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container.fs-2 img {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .container.fs-2 .text-center {
+        width: 100%;
+    }
+}
+
+/* Responsive navigation */
+@media (max-width: 992px) {
+    nav .container-fluid {
+        flex-direction: column;
+    }
+
+    nav .navbar-brand {
+        margin-bottom: 15px;
+    }
+
+    nav ul.nav {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav ul.nav li {
+        margin: 5px 10px;
+    }
+}
+
+/* Adjustments for very small screens */
+@media (max-width: 360px) {
+    body {
+        font-size: 12px;
+    }
+
+    .banner-container {
+        padding: 10px;
+    }
+
+    .service-text h2 {
+        font-size: 1.2em;
+    }
+
+    .service-text h6 {
+        font-size: 0.9em;
+    }
+}
