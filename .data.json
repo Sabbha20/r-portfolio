@@ -3,34 +3,34 @@
   "heading": "Python Developer",
   "services": [
     {
-      "title": "Python Automation",
-      "description": "Streamline your workflows with custom Python automation solutions.",
+      "title": "Automating anything.",
+      "description": "Will streamline your workflows and automate it with custom Python solutions.",
       "gif" : "/static/banner/automation.json",
       "fas": "fa-cogs"
     },
     {
-      "title": "Desktop App Development",
+      "title": "Desktop App Development.",
       "description": "Will create powerful and user-friendly desktop applications using Python.",
       "gif" : "/static/banner/desktop.json",
       "fas": "fa-desktop"
     }, {
-      "title": "Web Scraping",
+      "title": "Web Scraping.",
       "description": "Will extract valuable data from websites with efficient Python scripts.",
       "gif" : "/static/banner/scraping.json",
       "fas": "fa-search"
     }, {
-      "title": "Data Analysis",
+      "title": "Data Analysis.",
       "description": "Will provide insights from your data using Python's powerful data analysis libraries.",
       "gif" : "/static/banner/data.json",
       "fas": "fa-chart-bar"
     }, {
-      "title": "AI/ML Solutions",
+      "title": "AI/ML Solutions.",
       "description": "Will implement machine learning models and AI algorithms for your business needs.",
       "gif" : "/static/banner/ml.json",
       "fas": "fa-brain"
     },
     {
-      "title": "Mobile App Development",
+      "title": "Mobile App Development.",
       "description": "Will build and develop high-performance mobile applications for iOS and Android, using Flutter and Python..",
       "gif": "/static/banner/mobile.json",
       "fas": "fa-mobile-alt"
