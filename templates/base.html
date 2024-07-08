@@ -72,10 +72,20 @@
                 </ul>
             </div>
             <div class="col-md-4">
+                <h5 class="footer-title">Contact Me</h5>
+                <ul class="list-unstyled footer-text">
+                    <li><i class="fas fa-envelope"></i>&nbsp;{{ data.contact.email }}</li>
+                    <li><i class="fas fa-phone"></i>&nbsp;{{ data.contact.phone }}</li>
+                    <li><i class="fas fa-map-marker-alt"></i>&nbsp;{{ data.contact.location }}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12">
                 <h5 class="footer-title">Follow Me</h5>
                 <ul class="list-inline">
-                    <li class="list-inline-item"><a href="https://github.com/your-profile" class="footer-link"><i class="fab fa-github"></i></a></li>
-                    <li class="list-inline-item"><a href="https://linkedin.com/in/your-profile" class="footer-link"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="list-inline-item"><a href="{{ data.contact.github }}" class="footer-link"><i class="fab fa-github"></i></a></li>
+                    <li class="list-inline-item"><a href="{{ data.contact.linkedin }}" class="footer-link"><i class="fab fa-linkedin"></i></a></li>
                     <li class="list-inline-item"><a href="https://twitter.com/your-profile" class="footer-link"><i class="fab fa-twitter"></i></a></li>
                     <li class="list-inline-item"><a href="https://youtube.com/your-channel" class="footer-link"><i class="fab fa-youtube"></i></a></li>
                 </ul>

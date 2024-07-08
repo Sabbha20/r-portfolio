@@ -24,8 +24,7 @@ async fn about(tmpl: web::Data<Tera>) -> impl Responder {
     // HttpResponse::Ok().body("About Sabbha Mondal")
     let mut context = Context::new();
     context.insert("title", "About Page");
-    context.insert("message", "About Sabbha Mondal");
-
+    context.insert("data", &p_data());
     let rendered = tmpl.render("about.html", &context).unwrap();
     HttpResponse::Ok().body(rendered)
 }

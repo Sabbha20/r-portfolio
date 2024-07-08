@@ -40,8 +40,8 @@
 /*    --light-text: #3a3a3a;*/
 /*    --dark-text: #e0e0e0;*/
 /*}*/
+
 :root {
-    /* Light Theme */
     --light-gradient-1: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
     --light-gradient-2: linear-gradient(to top, #ffffff 0%, #cccccc 100%);
     --light-gradient-3: linear-gradient(120deg, #e5e5e5 0%, #d0d0d0 100%);
@@ -50,8 +50,6 @@
     --light-gradient-6: linear-gradient(135deg, #dddddd 0%, #bbbbbb 100%);
     --light-gradient-7: linear-gradient(to top, #eeeeee 0%, #d9d9d9 100%);
     --light-gradient-8: linear-gradient(120deg, #fafafa 0%, #e5e5e5 100%);
-
-    /* Dark Theme */
     --dark-gradient-1: linear-gradient(to bottom, #2f2f2f, #1a1a1a);
     --dark-gradient-2: linear-gradient(to right, #3a3a3a, #2b2b2b);
     --dark-gradient-3: linear-gradient(to bottom, #484848, #343434);
@@ -60,32 +58,16 @@
     --dark-gradient-6: linear-gradient(135deg, #4a4a4a, #2c2c2c);
     --dark-gradient-7: linear-gradient(to top, #515151, #383838);
     --dark-gradient-8: linear-gradient(120deg, #606060, #4a4a4a);
-
     --light-text: #3a3a3a;
     --dark-text: #e0e0e0;
-}
-
-body {
-    transition: background 0.5s ease, color 0.5s ease;
-}
-
-
-.banner {
-    transition: transform 0.5s ease;
-}
-
-.dynamic-text, .cursor {
-    transition: color 0.5s ease;
 }
 
 body {
     font-family: 'JetBrains Mono', monospace;
     margin: 0;
     padding: 0;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: background 0.5s ease, color 0.5s ease;
 }
 
 body.light-theme {
@@ -98,19 +80,12 @@ body.dark-theme {
     color: var(--dark-text);
 }
 
-.delius-unicase{
-    font-family: "Delius Unicase", "cursive";
+.delius-unicase, .delius-unicase-regular, .delius-unicase-bold {
+    font-family: "Delius Unicase", cursive;
 }
 
-.delius-unicase-regular {
-    font-family: "Delius Unicase", "cursive";
-    font-weight: 400;
-}
-
-.delius-unicase-bold {
-    font-family: "Delius Unicase", "cursive" !important;
-    font-weight: 700;
-}
+.delius-unicase-regular { font-weight: 400; }
+.delius-unicase-bold { font-weight: 700 !important; }
 
 .my-container {
     width: 80%;
@@ -201,13 +176,8 @@ body.dark-theme a.nav-link.p-nav-links:hover {
     animation: blink 0.7s infinite;
 }
 
-body.dark-theme .cursor {
-    color: #ffffff;
-}
-
-body.light-theme .cursor {
-    color: #2e2e2e;
-}
+body.dark-theme .cursor { color: #ffffff; }
+body.light-theme .cursor { color: #2e2e2e; }
 
 @keyframes blink {
     0%, 100% { opacity: 1; }
@@ -231,13 +201,8 @@ body.dark-theme lottie-player {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-body.light-theme .banner-container {
-    background: rgba(255, 255, 255, 0.4);
-}
-
-body.dark-theme .banner-container {
-    background: rgba(0, 0, 0, 0.2);
-}
+body.light-theme .banner-container { background: rgba(255, 255, 255, 0.4); }
+body.dark-theme .banner-container { background: rgba(0, 0, 0, 0.2); }
 
 .banner {
     display: flex;
@@ -261,13 +226,8 @@ body.dark-theme .banner-container {
     max-width: 80%;
 }
 
-.service-icon {
-    margin-bottom: 20px;
-}
-
-.service-text {
-    max-width: 600px;
-}
+.service-icon { margin-bottom: 20px; }
+.service-text { max-width: 600px; }
 
 .banner-nav {
     position: absolute;
@@ -289,26 +249,16 @@ body.dark-theme .banner-container {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
+.prev { left: 10px; }
+.next { right: 10px; }
 
 body.dark-theme .banner-nav {
     background: rgba(0, 0, 0, 0.2);
     color: var(--dark-text);
 }
 
-.banner-nav:hover {
-    background: rgba(255, 255, 255, 0.3);
-}
-
-body.dark-theme .banner-nav:hover {
-    background: rgba(0, 0, 0, 0.3);
-}
+.banner-nav:hover { background: rgba(255, 255, 255, 0.3); }
+body.dark-theme .banner-nav:hover { background: rgba(0, 0, 0, 0.3); }
 
 body.light-theme .banner-item h2,
 body.light-theme .banner-item p {
@@ -320,26 +270,11 @@ body.dark-theme .banner-item p {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
-    .service-icon lottie-player {
-        width: 80vw !important;
-        height: 40vh !important;
-    }
+lottie-player { transition: filter 0.5s ease; }
 
-    .banner-item {
-        height: auto;
-        padding: 40px 0;
-    }
-}
-
-/* Update lottie-player filter transition */
-lottie-player {
-    transition: filter 0.5s ease;
-}
-/* Footer Styling */
 .footer {
-    background: var(--light-gradient-4); /* Change to --dark-gradient-4 for dark theme */
-    color: var(--light-text); /* Change to --dark-text for dark theme */
+    background: var(--light-gradient-4);
+    color: var(--light-text);
     padding: 2rem 0;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -357,18 +292,14 @@ lottie-player {
 }
 
 .footer-link {
-    color: var(--light-text); /* Change to --dark-text for dark theme */
+    color: var(--light-text);
     transition: color 0.3s ease;
     font-size: 30px;
 }
 
-.footer-link:hover {
-    filter: invert(0.5);
-}
+.footer-link:hover { filter: invert(0.5); }
 
-.list-inline-item {
-    margin-right: 0.5rem;
-}
+.list-inline-item { margin-right: 0.5rem; }
 
 .footer-bottom {
     border-top: 1px solid #dddddd;
@@ -376,76 +307,98 @@ lottie-player {
     padding-top: 1rem;
 }
 
-/* Dark Theme Specific Styles */
 body.dark-theme .footer {
     background: var(--dark-gradient-4);
     color: var(--dark-text);
 }
 
-body.dark-theme .footer-link {
-    color: var(--dark-text);
+body.dark-theme .footer-link { color: var(--dark-text); }
+body.dark-theme .footer-bottom { border-color: #444444; }
+
+.skill-badge {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
 }
 
-body.dark-theme .footer-bottom {
-    border-color: #444444;
+.skill-badge:hover {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.05);
 }
-/* Add these rules to your existing styles.css file */
 
-/* General responsive adjustments */
-@media (max-width: 1200px) {
-    .my-container {
-        width: 90%;
-    }
+.card { transition: all 0.3s ease; }
+.card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+body.dark-theme .skill-badge {
+    background-color: #343a40;
+    border-color: #495057;
 }
+
+body.dark-theme .skill-badge:hover { background-color: #007bff; }
+
+body.dark-theme .card {
+    background-color: #343a40;
+    border-color: #495057;
+}
+
+body.dark-theme .card-body { color: #f8f9fa; }
+body.dark-theme .text-muted { color: #adb5bd !important; }
+
+.footer-text li { margin-bottom: 0.5rem; }
+.footer .list-inline { margin-bottom: 0; }
+.footer .list-inline-item { margin-right: 1rem; }
+
+.footer .footer-link {
+    font-size: 1.5rem;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 1200px) { .my-container { width: 90%; } }
 
 @media (max-width: 992px) {
-    .my-container {
-        width: 95%;
+    .my-container { width: 95%; }
+    .banner-container { height: 80vh; }
+    nav .container-fluid { flex-direction: column; }
+    nav .navbar-brand { margin-bottom: 15px; }
+    nav ul.nav {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
     }
-
-    .banner-container {
-        height: 80vh;
-    }
+    nav ul.nav li { margin: 5px 10px; }
 }
 
 @media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-
+    body { font-size: 14px; }
     .my-container {
         width: 100%;
         padding: 15px;
     }
-
-    header h1 {
-        font-size: 2em;
-    }
-
-    section h2 {
-        font-size: 1.5em;
-    }
-
-    .banner-container {
-        height: 90vh;
-    }
-
+    header h1 { font-size: 2em; }
+    section h2 { font-size: 1.5em; }
+    .banner-container { height: 90vh; }
     .service-icon lottie-player {
         width: 90vw !important;
         height: 30vh !important;
     }
-
-    .banner-item {
-        padding: 20px 0;
+    .banner-item { padding: 20px 0; }
+    .service-text h2 { font-size: 1.5em; }
+    .service-text h6 { font-size: 1em; }
+    .container.fs-2 .row { flex-direction: column-reverse; }
+    .container.fs-2 .offset-sm-2,
+    .container.fs-2 .offset-sm-1 { margin-left: 0; }
+    .container.fs-2 .col-sm-4,
+    .container.fs-2 .col-sm-5 {
+        width: 100%;
+        text-align: center;
     }
-
-    .service-text h2 {
-        font-size: 1.5em;
+    .container.fs-2 img {
+        width: 50%;
+        margin-bottom: 20px;
     }
-
-    .service-text h6 {
-        font-size: 1em;
-    }
+    .container.fs-2 .text-center { width: 100%; }
 }
 
 @media (max-width: 576px) {
@@ -453,95 +406,24 @@ body.dark-theme .footer-bottom {
         height: auto;
         min-height: 80vh;
     }
-
     .service-icon lottie-player {
         width: 100% !important;
         height: 25vh !important;
     }
-
     .banner-nav {
         padding: 5px 10px;
         font-size: 14px;
         width: 30px;
         height: 30px;
     }
-
-    .footer-title {
-        font-size: 1.2rem;
-    }
-
-    .footer-text {
-        font-size: 0.9rem;
-    }
-
-    .footer-link {
-        font-size: 24px;
-    }
+    .footer-title { font-size: 1.2rem; }
+    .footer-text { font-size: 0.9rem; }
+    .footer-link { font-size: 24px; }
 }
 
-/* Responsive adjustments for the main content area */
-@media (max-width: 768px) {
-    .container.fs-2 .row {
-        flex-direction: column-reverse;
-    }
-
-    .container.fs-2 .offset-sm-2,
-    .container.fs-2 .offset-sm-1 {
-        margin-left: 0;
-    }
-
-    .container.fs-2 .col-sm-4,
-    .container.fs-2 .col-sm-5 {
-        width: 100%;
-        text-align: center;
-    }
-
-    .container.fs-2 img {
-        width: 50%;
-        margin-bottom: 20px;
-    }
-
-    .container.fs-2 .text-center {
-        width: 100%;
-    }
-}
-
-/* Responsive navigation */
-@media (max-width: 992px) {
-    nav .container-fluid {
-        flex-direction: column;
-    }
-
-    nav .navbar-brand {
-        margin-bottom: 15px;
-    }
-
-    nav ul.nav {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    nav ul.nav li {
-        margin: 5px 10px;
-    }
-}
-
-/* Adjustments for very small screens */
 @media (max-width: 360px) {
-    body {
-        font-size: 12px;
-    }
-
-    .banner-container {
-        padding: 10px;
-    }
-
-    .service-text h2 {
-        font-size: 1.2em;
-    }
-
-    .service-text h6 {
-        font-size: 0.9em;
-    }
+    body { font-size: 12px; }
+    .banner-container { padding: 10px; }
+    .service-text h2 { font-size: 1.2em; }
+    .service-text h6 { font-size: 0.9em; }
 }

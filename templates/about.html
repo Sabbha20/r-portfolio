@@ -1,7 +1,64 @@
 {% extends "base.html" %}
 
-{% block title %}{{ title }}{% endblock %}
+{% block title %}About - {{ data.name }}{% endblock %}
 
 {% block content %}
-<h1>{{ message }}</h1>
+<div class="container my-5">
+    <h1 class="text-center mb-5">About {{ data.name }}</h1>
+
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <img src="/static/images/profile-picture.jpg" alt="{{ data.name }}" class="img-fluid rounded-circle">
+        </div>
+        <div class="col-md-8">
+            <h2>{{ data.heading }}</h2>
+            <ul class="list-unstyled">
+                {% for point in data.summary %}
+                <li class="mb-2"><i class="fas fa-check-circle mr-2"></i>&nbsp;{{ point }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <section class="my-5">
+        <h2 class="mb-4">Skills</h2>
+        <div class="row">
+            {% for skill in data.skills %}
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div class="skill-badge p-2 text-center rounded">{{ skill }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="my-5">
+        <h2 class="mb-4">Experience</h2>
+        {% for job in data.experience %}
+        <div class="card mb-4">
+            <div class="card-body">
+                <h3 class="card-title">{{ job.title }}</h3>
+                <h4 class="card-subtitle mb-2 text-muted">{{ job.company }}</h4>
+                <p class="card-text"><small class="text-muted">{{ job.duration }}</small></p>
+                <ul>
+                    {% for responsibility in job.responsibilities %}
+                    <li>{{ responsibility }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+
+    <section class="my-5">
+        <h2 class="mb-4">Education</h2>
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">{{ data.education.degree }}</h3>
+                <h4 class="card-subtitle mb-2 text-muted">{{ data.education.institution }}</h4>
+                <p class="card-text">{{ data.education.duration }}</p>
+                <p class="card-text">Result: {{ data.education.result }}</p>
+            </div>
+        </div>
+    </section>
+</div>
 {% endblock %}
