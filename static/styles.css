@@ -562,6 +562,18 @@ body.dark-theme ::placeholder {
         left: 0;
         transform: none;
     }
+    img.rounded.w-75 {
+        margin-left: 2rem;
+    }
+    img.img-fluid.rounded-circle {
+        max-height: 100vh;
+        margin: auto;
+        padding: 0 7em;
+    }
+
+    .col-md-6.offset-md-1.my-desc {
+        text-align: center;
+    }
 }
 
 @media (max-width: 576px) {
