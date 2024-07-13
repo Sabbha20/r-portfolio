@@ -1,0 +1,22 @@
+{% extends "admin_base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h1>Admin Dashboard</h1>
+<p>Welcome to your admin dashboard. Use the navigation menu to manage different aspects of your portfolio.</p>
+
+<section>
+    <h2>Quick Stats</h2>
+    <ul>
+        <li>Total Projects: {{ projects_count }}</li>
+        <li>Total Skills: {{ skills_count }}</li>
+        <li>Total Services: {{ services_count }}</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Recent Updates</h2>
+    <!-- You can add a list of recent changes here -->
+</section>
+{% endblock %}

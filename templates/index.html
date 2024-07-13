@@ -11,14 +11,15 @@
         {% for service in data.services %}
         <div class="banner-item">
             <div class="service-content">
-                <div class="service-icon mt-5">
-                    <lottie-player class="img-fluid rounded-start"
-                                   src={{ service.gif }} background="transparent" speed="1" style="" loop autoplay></lottie-player>
-                </div>
                 <div class="service-text">
                     <h2>{{ service.title }}</h2>
                     <h6 style="opacity: 0.4;">[{{ service.description }}]</h6>
                 </div>
+                <div class="service-icon mt-5">
+                    <lottie-player class="img-fluid rounded-start"
+                                   src={{ service.gif }} background="transparent" speed="1" style="" loop autoplay></lottie-player>
+                </div>
+
             </div>
         </div>
         {% endfor %}

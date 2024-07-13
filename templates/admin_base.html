@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/admin.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="/admin">Dashboard</a></li>
+            <li><a href="/admin/profile">Edit Profile</a></li>
+            <li><a href="/admin/projects">Manage Projects</a></li>
+            <li><a href="/admin/skills">Manage Skills</a></li>
+            <li><a href="/admin/services">Manage Services</a></li>
+            <li><a href="/">View Site</a></li>
+            <li><a href="/admin/logout">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+    <p>&copy; <span id="current-year"></span> Admin Panel</p>
+</footer>
+
+<script src="/static/admin/admin.js"></script>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+{% block extra_js %}{% endblock %}
+</body>
+</html>

@@ -1,4 +1,5 @@
 mod data;
+mod admin;
 
 use data::data::p_data;
 use actix_files as fs;
@@ -65,6 +66,7 @@ async fn main() -> std::io::Result<()> {
             .route("/contact", web::get().to(contact))
             .route("/projects", web::get().to(projects))
             .route("/phrases", web::get().to(get_phrases))
+            .configure(admin::config)
     })
         .bind("127.0.0.1:8000")?
         .run()

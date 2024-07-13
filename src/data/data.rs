@@ -9,11 +9,11 @@ use serde_json;
 pub struct Resume {
     name: String,
     heading: String,
-    services: Vec<Services>,
+    pub services: Vec<Services>,
     pub tag: Vec<String>,
     contact: Contact,
     summary: Vec<String>,
-    skills: Vec<Skills>,
+    pub skills: Vec<Skills>,
     experience: Vec<Experience>,
     education: Education,
 }
