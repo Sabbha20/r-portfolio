@@ -2,7 +2,14 @@
   "name": "Sabbha Mondal",
   "heading": "Python Developer",
   "services": [
-     {
+    {
+      "title": "Automation tools.",
+      "description": "Will streamline your workflows and provide customized automation tools with Python solutions.",
+      "gif": "/static/banner/automation.json",
+      "fas": "fa-cogs"
+    },
+
+    {
       "title": "Web Scraping.",
       "description": "Will extract valuable data from websites with efficient Python scripts.",
       "gif" : "/static/banner/scraping.json",
@@ -13,12 +20,7 @@
       "gif" : "/static/banner/data.json",
       "fas": "fa-chart-bar"
     },
-    {
-      "title": "Automation tools.",
-      "description": "Will streamline your workflows and provide customized automation tools with Python solutions.",
-      "gif": "/static/banner/automation.json",
-      "fas": "fa-cogs"
-    }, {
+     {
       "title": "AI/ML Solutions.",
       "description": "Will implement machine learning models and AI algorithms for your business needs.",
       "gif" : "/static/banner/ml.json",
