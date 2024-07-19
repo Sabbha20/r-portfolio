@@ -1,60 +1,71 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// Smooth scroll function
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+// Animate sections on scroll
+function animateSections() {
+    gsap.utils.toArray('section').forEach((section, i) => {
+        const sectionElements = section.children;
+        gsap.set(sectionElements, { y: 50, opacity: 0 });
+
+        ScrollTrigger.create({
+            trigger: section,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            onEnter: () => gsap.to(sectionElements, {
+                y: 150,
+                opacity: 1,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: 'power3.out'
+            }),
+            onLeaveBack: () => gsap.to(sectionElements, {
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                stagger: 0.1,
+                ease: 'power3.in'
+            })
         });
     });
-});
+}
 
-// Animations for each section
-gsap.from("#home .banner-item", {
-    scrollTrigger: {
-        trigger: "#home",
-        start: "top center",
-        end: "bottom center",
-        scrub: true
-    },
-    y: 100,
-    opacity: 0,
-    stagger: 0.2
-});
+// Animate navbar on scroll
+function animateNavbar() {
+    const navbar = document.querySelector('nav');
+    gsap.to(navbar, {
+        scrollTrigger: {
+            trigger: 'body',
+            start: 'top -80px',
+            end: '+=80',
+            scrub: true
+        },
+        // backgroundColor: 'rgba(255, 255, 255, 0.9)',
+        boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+        padding: '10px 0'
+    });
+}
 
-gsap.from("#about p", {
-    scrollTrigger: {
-        trigger: "#about",
-        start: "top center",
-        end: "bottom center",
-        scrub: true
-    },
-    x: -100,
-    opacity: 0,
-    stagger: 0.2
-});
+// Animate skill badges
+function animateSkills() {
+    gsap.utils.toArray('.skill-badge').forEach((badge, i) => {
+        gsap.from(badge, {
+            scrollTrigger: {
+                trigger: badge,
+                start: 'top 90%',
+                end: 'bottom 10%',
+                toggleActions: 'play none none reverse'
+            },
+            scale: 0.5,
+            opacity: 0,
+            duration: 0.5,
+            delay: i * 0.1,
+            ease: 'back.out(1.7)'
+        });
+    });
+}
 
-gsap.from("#projects .project", {
-    scrollTrigger: {
-        trigger: "#projects",
-        start: "top center",
-        end: "bottom center",
-        scrub: true
-    },
-    y: 50,
-    opacity: 0,
-    stagger: 0.2
-});
+// Run animations
+animateSections();
+animateNavbar();
+animateSkills();
 
-gsap.from("#contact p", {
-    scrollTrigger: {
-        trigger: "#contact",
-        start: "top center",
-        end: "bottom center",
-        scrub: true
-    },
-    scale: 0.8,
-    opacity: 0,
-    stagger: 0.2
-});
+gsap.registerPlugin(ScrollTrigger);

@@ -8,7 +8,6 @@
       "gif": "/static/banner/automation.json",
       "fas": "fa-cogs"
     },
-
     {
       "title": "Web Scraping.",
       "description": "Will extract valuable data from websites with efficient Python scripts.",

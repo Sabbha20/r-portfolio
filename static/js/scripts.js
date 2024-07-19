@@ -99,3 +99,24 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(error => console.error('Error fetching phrases:', error));
     }
 });
+
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Here you would typically send the form data to your server
+    // For now, we'll just show an alert
+    alert('Thank you for your message! We\'ll get back to you soon.');
+
+    // Clear the form
+    this.reset();
+});
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});

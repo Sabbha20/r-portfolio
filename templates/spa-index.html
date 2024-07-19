@@ -30,7 +30,7 @@
 <header >
     <!-- Common header content -->
 
-    <nav class="my-4 mb-5 navbar-expand-lg navbar-expand-md">
+    <nav class="my-4 mb-0 navbar-expand-lg navbar-expand-md">
         <div class="container-fluid  d-flex">
             <a class="navbar-brand m-auto delius-unicase-bold" href="/">
                 <img src="/static/logo/logo-rbg.png"
@@ -46,7 +46,7 @@
         </div>
     </nav>
 </header>
-<section id="home">
+<section id="home" class="mb-8">
 <div class="inline-block"><h1 class="text-center">{{ message }}<span class="cursor">|</span></h1></div>
 
 
@@ -92,9 +92,9 @@
     </div>
 </div>
 </section>
-<section id="about">
+<section id="about" class="mb-8">
     <div class="container my-5">
-        <h1 class="text-center mb-5">About {{ data.name }}<span class="cursor">|</span></h1>
+        <h1 class="text-center mb-5">About Me<span class="cursor">|</span></h1>
 
         <div class="row">
             <div class="col-md-4 mb-4">
@@ -110,21 +110,6 @@
                 </ul>
             </div>
         </div>
-
-        <section class="my-5">
-            <h2 class="mb-4">Skills</h2>
-            <div class="row">
-                {% for skill in data.skills %}
-                <div class="col-md-3 col-sm-6 mb-3">
-                    <div class="skill-badge p-2 text-center rounded delius-unicase-bold">
-                        <i class="{{ skill.icon }} fa-fw mr-2"></i>
-
-                        {{ skill.name }}
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </section>
 
         <section class="my-5">
             <h2 class="mb-4">Experience</h2>
@@ -156,7 +141,6 @@
                 {% endfor %}
             </div>
         </section>
-
         <section class="my-5">
             <h2 class="mb-4">Education</h2>
             <div class="fancy-timeline">
@@ -171,17 +155,33 @@
                 </div>
             </div>
         </section>
+
+        
+        <section class="my-5">
+            <h2 class="mb-4">Skills</h2>
+            <div class="row">
+                {% for skill in data.skills %}
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="skill-badge p-2 text-center rounded delius-unicase-bold">
+                        <i class="{{ skill.icon }} fa-fw mr-2"></i>
+
+                        {{ skill.name }}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
     </div>
 </section>
 
-<section id="projects">
+<section id="projects" class="mb-8">
     <div class="container my-container mb-5 my-5">
         <h2>My Projects</h2>
         <!-- Add your projects here -->
     </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="mb-8">
     <div class="container my-container my-5 p-5" style="line-height: 6em;">
         <h1 class="text-center">Contact Me<span class="cursor">|</span></h1>
         <form id="contact-form">
